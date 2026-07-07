@@ -1,0 +1,13 @@
+services:
+  tracy-gateway:
+    build: .
+    container_name: tracy-gateway
+    ports:
+      - '8000:80'
+    networks:
+      - tracy-net
+    restart: always
+
+networks:
+  tracy-net:
+    external: true
